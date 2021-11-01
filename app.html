@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mata Moscas!</title>
+	<script src="game.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body onresize="sizeAdjust()">
+
+	<div class="painel">
+		<div class="vidas">
+			<img id= "v1" src="coracao_cheio.png">
+			<img id= "v2" src="coracao_cheio.png">
+			<img id= "v3" src="coracao_cheio.png">
+		</div>
+
+		<div class="cronometro">Tempo restante: <span id="cronometro"></span> </div>
+	</div>
+
+
+
+	<script>
+
+		document.getElementById('cronometro').innerHTML = tempo
+
+		var criaMosca = setInterval(function(){
+			randomPosition()
+		},tempomosca)
+
+	</script>
+
+</body>
+
+</html>
